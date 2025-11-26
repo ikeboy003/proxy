@@ -177,7 +177,6 @@ func copyHeaders(dst, src http.Header) {
 
 // removeHopByHop removes hop-by-hop headers not to be forwarded.
 func removeHopByHop(h http.Header) {
-	h.Del("Connection")
 	h.Del("Proxy-Connection")
 	h.Del("Keep-Alive")
 	h.Del("Proxy-Authenticate")
